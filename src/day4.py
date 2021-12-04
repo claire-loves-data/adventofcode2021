@@ -55,9 +55,7 @@ def call_number(num, cards):
 def discard_winners(cards):
     to_delete = []
     for i, card in enumerate(cards):
-        if -5 in np.sum(card, axis=1):
-            to_delete.append(i)
-        elif -5 in np.sum(card, axis=0):
+        if check_one_card(card):
             to_delete.append(i)
 
     return np.delete(cards, to_delete, 0)
