@@ -1,3 +1,3 @@
 # adventofcode2021
 
-Days 1-5 complete in python.
+Days 1-6 complete in python.
