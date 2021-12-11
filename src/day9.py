@@ -7,8 +7,13 @@ def find_lows(lavatubes):
     up = np.less(lavatubes[1:-1, 1:-1], lavatubes[0:-2, 1:-1])
     down = np.less(lavatubes[1:-1, 1:-1], lavatubes[2:, 1:-1])
     mask = left & right & up & down
-    print(sum(lavatubes[1:-1, 1:-1][mask]) + len(lavatubes[1:-1, 1:-1][mask]))
+    return lavatubes[1:-1, 1:-1][mask]
 
+def sum_risk(lows):
+    print(sum(lows) + len(lows))
+
+def part2(lavatubes):
+    ...
 
 if __name__ == "__main__":
     with open("data/day9test.txt") as fp:
@@ -22,4 +27,6 @@ if __name__ == "__main__":
         lavalist.append(horizontal)
         lavatubes = np.array(lavalist, dtype=np.int64)
         print(lavatubes)
-        find_lows(lavatubes)
+        sum_risk(find_lows(lavatubes))
+        
+    
