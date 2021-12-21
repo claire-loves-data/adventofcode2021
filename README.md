@@ -1,6 +1,6 @@
 # adventofcode2021
 
-Days 1-8 complete in python, first half of day 9.
+Days 1-9 complete in python
 
 Written in python 3.9.7, deps so far only numpy.
 
